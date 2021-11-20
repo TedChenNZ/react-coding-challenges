@@ -3,7 +3,7 @@ import React, { useCallback, useState } from 'react';
 const DarkModeContext = React.createContext();
 
 function getDarkModeFromCache() {
-  return localStorage.getItem('isDarkMode');
+  return localStorage.getItem('isDarkMode') === "true";
 }
 
 function setDarkModeFromCache(isDarkMode) {
