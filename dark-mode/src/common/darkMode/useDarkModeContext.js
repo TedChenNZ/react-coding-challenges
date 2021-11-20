@@ -2,12 +2,13 @@ import React, { useCallback, useState } from 'react';
 
 const DarkModeContext = React.createContext();
 
+const DARK_MODE_CACHE_KEY = 'isDarkMode';
 function getDarkModeFromCache() {
-  return localStorage.getItem('isDarkMode') === "true";
+  return localStorage.getItem(DARK_MODE_CACHE_KEY) === "true";
 }
 
 function setDarkModeFromCache(isDarkMode) {
-  return localStorage.setItem('isDarkMode', isDarkMode);
+  return localStorage.setItem(DARK_MODE_CACHE_KEY, isDarkMode);
 }
 
 function useIsDarkMode() {
